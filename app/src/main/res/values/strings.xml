@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Liste Courses</string>
+    <string name="see_shop_list">Liste des articles</string>
+    <string name="empty_all_list">Vider la liste</string>
+    <string name="confirmation_all_items_deleted">Tous les articles ont été supprimés</string>
+    <string name="undo">Annuler</string>
+    <string name="no_articles_yet">Vous n\'avez pas encore choisi d\'article dans ce magasin</string>
+    <string name="enter_product_name">Nom du produit</string>
+    <string name="kilogram">kg.</string>
+    <string name="gram">g.</string>
+    <string name="liter">lit.</string>
+    <string name="none">-</string>
+    <string name="shop_list_title">Liste des magasins</string>
+    <string name="activate_maps">Activer Maps</string>
+    <string name="add_shop">Ajouter un magasin</string>
+    <string name="add_action">Ajouter</string>
+    <string name="update_action">Modifier</string>
+    <string name="cancel">Annuler</string>
+    <string name="shop_name">Nom du magasin</string>
+    <string name="street_number">Numéro</string>
+    <string name="street_name">Rue</string>
+    <string name="city">Ville</string>
+    <string name="zip_code">Code postal</string>
+    <string name="error_empty_field">Veuillez remplir ce champ</string>
+    <string name="error_couldnt_get_picture">La photo n\'a pas pu être copiée</string>
+</resources>

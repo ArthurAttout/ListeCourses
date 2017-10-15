@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="370dp"
+    android:layout_height="209dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="12dp"
+    app:contentPadding="0dp"
+    card_view:cardBackgroundColor="@color/colorBackgroundCard"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundCard"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorOverlayCard"
+            android:clickable="true"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+            app:layout_constraintTop_toTopOf="@+id/guidelineMiddle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/imageViewMapShop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="93dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1.0"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="93dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.0"
+            tools:layout_editor_absoluteX="362dp"
+            tools:layout_editor_absoluteY="93dp" />
+
+        <TextView
+            android:id="@+id/textViewShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/colorTitleCard"
+            android:textSize="28sp"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonListItems"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guidelineMiddle"
+            tools:text="Carrefour" />
+
+        <Button
+            android:id="@+id/buttonListItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+
+            android:background="@android:color/transparent"
+            android:text="@string/see_shop_list"
+            android:textColor="@color/colorButtonCardText"
+            android:translationZ="1dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+            card_view:layout_constraintBottom_toTopOf="@+id/guidelineBottom" />
+
+        <Button
+            android:id="@+id/buttonEmptyList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:text="@string/empty_all_list"
+            android:textColor="@drawable/selector_button_empty_list"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintLeft_toRightOf="@+id/buttonListItems" />
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/colorTitleCard"
+            android:translationZ="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewShopName"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/textViewShopName"
+            app:layout_constraintTop_toTopOf="@+id/textViewShopName"
+            android:layout_marginTop="0dp"
+            app:layout_constraintVertical_bias="0.68" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/checkboxActivateStreetView"
+        android:title="@string/activate_maps"
+        app:showAsAction="never"
+        android:checkable="true"/>
+
+    <item
+        android:id="@+id/actionAddShop"
+        android:title="@string/add_shop"
+        android:icon="@drawable/ic_add_white_24dp"
+        app:showAsAction="always" />
+</menu>
