@@ -292,10 +292,12 @@ public class ItemListActivity extends AppCompatActivity {
                 case none:
                     quantityPicker.setMinValue(1);
                     quantityPicker.setMaxValue(15);
+                    quantityPicker.setFormatter(null);
                     break;
                 case kilogram:
                     quantityPicker.setMinValue(1);
                     quantityPicker.setMaxValue(30);
+                    quantityPicker.setFormatter(null);
                     break;
                 case gram:
                     quantityPicker.setMinValue(1);
@@ -303,7 +305,7 @@ public class ItemListActivity extends AppCompatActivity {
                     NumberPicker.Formatter formatter = new NumberPicker.Formatter() {
                         @Override
                         public String format(int value) {
-                            int diff = value * 5;
+                            int diff = value * 50;
                             return "" + diff;
                         }
                     };
@@ -312,6 +314,7 @@ public class ItemListActivity extends AppCompatActivity {
                 case liter:
                     quantityPicker.setMinValue(1);
                     quantityPicker.setMaxValue(60);
+                    quantityPicker.setFormatter(null);
                     break;
             }
         }
