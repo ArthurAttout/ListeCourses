@@ -14,7 +14,6 @@ import java.util.Collection;
 import masi.henallux.be.listecourses.dao.sqlModels.AddressEntity;
 import masi.henallux.be.listecourses.dao.sqlModels.ItemEntity;
 import masi.henallux.be.listecourses.dao.sqlModels.ShopEntity;
-import masi.henallux.be.listecourses.model.Address;
 import masi.henallux.be.listecourses.model.Item;
 import masi.henallux.be.listecourses.model.Shop;
 import masi.henallux.be.listecourses.utils.MapService;
