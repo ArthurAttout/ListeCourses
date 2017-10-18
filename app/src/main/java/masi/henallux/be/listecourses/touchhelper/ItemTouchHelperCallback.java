@@ -7,7 +7,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import masi.henallux.be.listecourses.ItemListActivity;
 
 /**
- * Created by Le Roi Arthur on 10-10-17.
+ * Created by Arthur on 10-10-17.
  */
 
 public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {

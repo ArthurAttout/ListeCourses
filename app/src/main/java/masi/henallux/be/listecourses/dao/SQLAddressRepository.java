@@ -9,7 +9,7 @@ import masi.henallux.be.listecourses.dao.sqlModels.AddressEntity;
 import masi.henallux.be.listecourses.model.Address;
 
 /**
- * Created by Le Roi Arthur on 12-10-17.
+ * Created by Arthur on 12-10-17.
  */
 
 public class SQLAddressRepository implements IAddressRepository{

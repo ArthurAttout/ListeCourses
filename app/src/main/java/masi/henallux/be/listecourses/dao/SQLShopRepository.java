@@ -20,7 +20,7 @@ import masi.henallux.be.listecourses.model.Shop;
 import masi.henallux.be.listecourses.utils.MapService;
 
 /**
- * Created by Le Roi Arthur on 09-10-17.
+ * Created by Arthur on 09-10-17.
  */
 
 public class SQLShopRepository implements IShopRepository {

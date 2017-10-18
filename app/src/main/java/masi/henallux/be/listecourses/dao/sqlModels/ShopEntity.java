@@ -1,7 +1,7 @@
 package masi.henallux.be.listecourses.dao.sqlModels;
 
 /**
- * Created by Le Roi Arthur on 09-10-17.
+ * Created by Arthur on 09-10-17.
  */
 
 public class ShopEntity {

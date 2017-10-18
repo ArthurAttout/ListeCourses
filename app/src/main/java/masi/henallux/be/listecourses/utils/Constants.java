@@ -1,7 +1,7 @@
 package masi.henallux.be.listecourses.utils;
 
 /**
- * Created by Le Roi Arthur on 03-10-17.
+ * Created by Arthur on 03-10-17.
  */
 
 public class Constants {

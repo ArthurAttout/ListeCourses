@@ -24,7 +24,7 @@ import java.nio.channels.FileChannel;
 import static android.os.Environment.getExternalStorageDirectory;
 
 /**
- * Created by Le Roi Arthur on 15-10-17.
+ * Created by Arthur on 15-10-17.
  */
 
 public class FileService {
