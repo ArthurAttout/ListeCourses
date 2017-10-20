@@ -13,4 +13,6 @@ public class Constants {
     public static final String SHOULD_SHOW_MAPS_PREFERENCE = "should_show_street_view_pref";
     public static final String BUNDLE_SHOP_TO_UPDATE = "shop_to_update";
     public static final int REQUESTCODE_GALLERY_PICTURE = 0x98;
+    public static final int ITEM_DEFAULT_WIDTH = 340;
+    public static final int SHOP_DEFAULT_WIDTH = 340;
 }

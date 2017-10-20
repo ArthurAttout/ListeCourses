@@ -5,11 +5,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +46,22 @@ public class ItemListActivity extends AppCompatActivity {
         setTitle(shop.getName());
 
         recyclerViewItems = (RecyclerView)findViewById(R.id.recyclerViewItems);
-        recyclerViewItems.setLayoutManager(new LinearLayoutManager(this));
+        if(getResources().getBoolean(R.bool.isTablet)){
+            Display display = getWindowManager().getDefaultDisplay();
+            DisplayMetrics outMetrics = new DisplayMetrics();
+            display.getMetrics(outMetrics);
+
+            float density  = getResources().getDisplayMetrics().density;
+            float dpWidth  = outMetrics.widthPixels / density;
+
+            int nbColumns = (int) (dpWidth / Constants.ITEM_DEFAULT_WIDTH);
+            recyclerViewItems.setLayoutManager(new GridLayoutManager(this,nbColumns));
+        }
+        else
+        {
+            recyclerViewItems.setLayoutManager(new LinearLayoutManager(this));
+        }
+
         adapter = new ItemAdapter(shop.getChosenItems());
         recyclerViewItems.setAdapter(adapter);
 
@@ -109,13 +127,14 @@ public class ItemListActivity extends AppCompatActivity {
                 items.clear();
                 items.add(new Item(0,"",0, Item.UnitType.none));
                 items.add(null);
+                notifyItemInserted(0);
             }
             else
             {
-                //int index = items.indexOf(null);
-                items.add(0,new Item(0,"",0, Item.UnitType.none));
+                items.add(items.size()-1,new Item(0,"",0, Item.UnitType.none));
+                notifyItemInserted(items.size()-1);
             }
-            notifyItemInserted(0);
+
         }
 
         @Override

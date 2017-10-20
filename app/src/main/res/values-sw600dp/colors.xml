@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00ac70</color>
+    <color name="colorPrimaryDark">#006c47</color>
+    <color name="colorAccent">#7986cb</color>
+    <color name="colorDelete">#ff989f</color>
+    <color name="colorBackgroundCard">#ffffff</color>
+    <color name="colorTitleCard">#ffffff</color>
+    <color name="colorOverlayCard">#7d464646</color>
+    <color name="colorButtonCardText">#ffffff</color>
+</resources>

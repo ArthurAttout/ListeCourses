@@ -10,8 +10,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -54,7 +57,22 @@ public class ShopListActivity extends AppCompatActivity implements AddShopCallba
         progressBar.setVisibility(View.VISIBLE);
         rootLayout = (ConstraintLayout) findViewById(R.id.activity_main);
         shopRecyclerView = (RecyclerView)findViewById(R.id.recyclerViewShops);
-        shopRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        if(getResources().getBoolean(R.bool.isTablet)){
+            Display display = getWindowManager().getDefaultDisplay();
+            DisplayMetrics outMetrics = new DisplayMetrics();
+            display.getMetrics(outMetrics);
+
+            float density  = getResources().getDisplayMetrics().density;
+            float dpWidth  = outMetrics.widthPixels / density;
+
+            int nbColumns = (int) (dpWidth / Constants.SHOP_DEFAULT_WIDTH);
+            shopRecyclerView.setLayoutManager(new GridLayoutManager(this,nbColumns));
+        }
+        else
+        {
+            shopRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }
+
 
         shouldShowMapDrawable = retrievePreferenceMaps();
 
